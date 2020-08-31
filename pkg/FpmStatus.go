@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
 	"time"
 
 	"github.com/pkg/errors"
@@ -45,8 +44,6 @@ func init() {
 	prometheus.MustRegister(processesCount)
 	prometheus.MustRegister(maxChildrenReachedCount)
 	prometheus.MustRegister(slowRequests)
-	prometheus.Unregister(prometheus.NewProcessCollector(os.Getpid(), ""))
-	prometheus.Unregister(prometheus.NewGoCollector())
 }
 
 // FpmStatus represents the JSON data exported by php-fpm

@@ -3,8 +3,8 @@ package phpfpm
 import (
 	"io/ioutil"
 
-	"github.com/go-yaml/yaml"
 	"github.com/pkg/errors"
+	"gopkg.in/yaml.v2"
 )
 
 // VirtualHost contains fields representing a virtual host on a server
